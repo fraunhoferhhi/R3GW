@@ -1,0 +1,39 @@
+# Optimizer parameters
+# Gaussians
+iterations: 40_000
+position_lr_init: 0.00016
+position_lr_final: 0.0000016
+position_lr_delay_mult: 0.01
+position_lr_max_steps: 30_000
+opacity_lr: 0.05
+scaling_lr: 0.001
+rotation_lr: 0.001
+percent_dense: 0.01
+lambda_dssim: 0.2
+densification_interval: 500
+opacity_reset_interval: 3000
+densify_from_iter: 500
+densify_until_iter: 15_000
+densify_grad_threshold: 0.0001
+roughness_lr: 0.0002
+metalness_lr: 0.0002
+albedo_lr: 0.0025
+sky_radius_lr: 0.0001
+start_specular_from_iter: 0
+reg_normal_from_iter: 2_000
+reg_normal_until_iter: 40_000
+normal_prior_loss_until_iter: 0
+lambda_normal: 0.05
+lambda_normal_prior: 0.05
+reg_sky_gauss_depth_from_iter: 0
+lambda_sky_gauss : 0.005
+reg_sky_fg_from_iter: 0
+lambda_sky_fg: 0.5
+lambda_scale: 1.0
+lambda_envlight: 1.0
+warm_up_iters: 100
+# Per-image appearance embeddings
+embeddings_lr: 0.0002
+optim_embeddings_test_iters: 100
+# MLP net
+mlp_lr: 0.0002

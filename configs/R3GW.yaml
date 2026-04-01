@@ -1,0 +1,67 @@
+# General parameters
+envlight_sh_degree: 4
+sky_sh_degree: 1
+embeddings_dim: 128
+specular: True
+fix_sky: False
+use_metalness: False
+
+
+hydra:
+  run:
+    dir:  ./logs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+
+defaults:
+  - _self_
+  - optimizer: optimization_params.yaml
+
+
+run:
+  quiet: False
+
+# Rasterization pipeline parameters
+pipe:
+  convert_SHs_python: False
+  compute_cov3D_python: False
+
+# Dataset parameters
+dataset:
+  source_path: ""
+  model_path: ""
+  test_config_path: ""
+  images: "images"
+  resolution: -1
+  data_device: "cuda"
+  eval: False
+  logger: True
+
+# Scripts parameters
+train:
+  test_iterations: [1_000, 5_000, 10_000, 15_000, 20_000, 30_000]
+  checkpoint_iterations: [1, 20_000, 30_000, 40_000]
+  start_checkpoint: null # path to checkpoint to resume training from, e.g. output/lwp/checkpoint/iteration_40000/checkpoint.pth
+  gui_server:
+    ip: "127.0.0.1"
+    port: 6009
+  detect_anomaly: False
+
+
+render:
+  skip_train: False
+  skip_test: False
+  iteration: -1
+  render_with_gt_envmaps: False
+
+
+eval:
+  iteration: -1
+  random_sun_angle: False # eval mode
+
+
+relighting:
+  iteration: -1
+  view_name: null # name of the view to relight, e.g "0001.png"
+  envmap_path: null # path to an external environment map
+  trained_illumination_name: null # name of a trained illumination (same as corresponding training image name)
+  training_view: False # set this to True if the view to relight is a training view, otherwise to False

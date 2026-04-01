@@ -1,0 +1,12 @@
+*/__pycache__/*
+*/__PYCACHE__/*
+*.ipynb
+__pycache__
+.vscode/
+output*
+log*
+**/build
+*.egg-info
+*.dump
+eval*
+*.pyc
