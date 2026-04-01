@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="A novel method for outdoor scene relighting in the wild built upon 3D Gaussian Splatting (3DGS), developed by researchers at Fraunhofer Heinrich Hertz Institute HHI and Humboldt University of Berlin."
+    />
+    <meta property="og:title" content="R3GW: Relightable 3D Gaussians for Outdoor Scenes in the Wild" />
+    <meta property="og:description" content="Relightable 3DGS representation of an outdoor scene captured in the wild." />
+    <meta property="og:url" content="https://fraunhoferhhi.github.io/R3GW/" />
+    <meta property="og:image" content="https://fraunhoferhhi.github.io/R3GW/static/images/teaser.jpg" />
+    <meta property="og:image:width" content="1038" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:title" content="Overview R3GW" />
+    <meta name="twitter:description" content="Relightable 3DGS representation of an outdoor scene captured in the wild." />
+    <meta name="twitter:image" content="https://fraunhoferhhi.github.io/R3GW/static/images/teaser.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="keywords"
+      content="R3GW, 3D scene representation in the wild, 3DGS, relighting,outdoor scene modeling, view-dependent lighting effects, sky model."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>R3GW Project Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="static/js/vidsplit_multi.js"></script>
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">R3GW: Relightable 3D Gaussians for Outdoor Scenes in the Wild</h1>
+              <h2 class="is-size-3">VISAPP 2026</h2>
+              <br />
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
+                <span class="author-block">
+                  <a href="https://www.hhi.fraunhofer.de/en/departments/vit/research-groups/computer-vision-graphics/team.html" target="_blank"> Margherita Lea Corona </a>
+                  <sup><small>1</small></sup
+                  >,</span
+                >
+                <span class="author-block">
+                  <a href="https://www.hhi.fraunhofer.de/en/departments/vit/research-groups/computer-vision-graphics/team/morgenstern.html" target="_blank"
+                    >Wieland Morgenstern</a
+                  ><sup><small>1</small></sup
+                  >,</span
+                >
+                <span class="author-block">
+                  <a href="https://iphome.hhi.de/eisert/" target="_blank">Peter Eisert</a><sup><small>1,2</small></sup>
+                </span>,
+                <span class="author-block">
+                  <a href="https://iphome.hhi.de/hilsmann/index.htm" target="_blank">Anna Hilsmann</a><sup><small>1</small></sup
+                  >
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <sup><small>1 </small></sup>Fraunhofer Heinrich Hertz Institute, HHI <br />
+                  <sup><small>2 </small></sup>Humboldt University of Berlin
+                  <br />
+                  <!-- Conference name and year -->
+                </span>
+              </div>
+
+              <div class="column has-text-centered">
+                <!-- LateXML rendering GitHub page -->
+
+                <div class="publication-links">
+                  <!-- Arxiv PDF link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/2603.02801" target="_blank" class="external-link button is-normal is-rounded is-dark is-disabled">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a
+                      href="https://fraunhoferhhi.github.io/R3GW/"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <video 
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="none"
+          style="max-width:100%;"
+        >
+          <source src="static/videos/R3GW_video_results.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">TL;DR</h2>
+            <div class="content has-text-justified">
+              <p>
+                 R3GW learns a <b>relightable 3D Gaussian Splatting representation of an outdoor scene captured in the wild</b>. Our method
+                factorizes the scene’s foreground into geometry, material, and illumination, with the lighting represented as an environment map. This enables <b>illumination editing along with
+                novel view synthesis</b>. <b>The sky, as a non-reflective surface, is modeled with a dedicated set of Gaussians that remain independent of scene lighting and material</b>. R3GW achieves state-of-the-art
+                performance incorporating <b>view-dependent effects in the foreground reflectance modeling</b> and enhancing scene depth estimation thanks to the introduced sky model.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-4">Contributions</h2>
+            <div class="content has-text-justified">
+              <ol>
+                <li>
+                  We
+                  present a <strong>new 3D Gaussian Splatting framework that handles outdoor scenes captured in the
+                  wild and supports relighting under arbitrary environment maps</strong>.
+                </li>
+                <li>
+                  We
+                  <strong>integrate PBR with a Cook-Torrance BRDF into the 3DGS scene representation in a varying illumination setting</strong>.
+                  To achieve this, we leverage the split-sum approximation technique and the SH representation of the environmental light.
+                </li>
+                <li>
+                  We
+                  propose a <strong>decoupled sky-foreground representation</strong> for the 3DGS framework. The sky is represented as a set of Gaussians constrained to the
+                  background region of the upper hemisphere enclosing the scene. This separation yields a <strong>physically plausible scene representation</strong>, where the
+                  sky appearance remains independent of surface material. Moreover, <strong>the design of the sky region enhances the scene depth estimation</strong> and consequently improves the rendering of elements located at the sky-foreground boundary.
+                </li>
+              </ol>
+            </div>
+
+            <h2 class="title is-4">Key Insight</h2>
+            <div class="content has-text-justified">
+              <p>
+                R3GW reconstructs an in-the-wild outdoor scene using two distinct sets of 3D Gaussians: one representing the relightable foreground with view-dependent reflectance and one representing the non‑reflective sky, whose appearance is independent of material and illumination.
+                This decoupling stabilizes lighting estimation and improves geometry reconstruction,
+                while enabling photorealistic relighting under arbitrary environment maps. In addition, 
+                our controllable sky model enables photorealistic sky synthesis using the learned sky colors. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaser video-->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img style="display: block; margin-left: auto; margin-right: auto; width: 70%" src="static/images/teaser.jpg" alt="MY ALT TEXT" />
+          <p></p>
+        </div>
+      </div>
+    </section>
+    <!-- End teaser video -->
+    
+  
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                3D Gaussian Splatting (3DGS) has established itself as a leading technique for 3D reconstruction and novel
+                view synthesis of static scenes, achieving outstanding rendering quality and fast training. However, the method
+                does not explicitly model the scene illumination, making it unsuitable for relighting tasks. Furthermore, 3DGS
+                struggles to reconstruct scenes captured in the wild by unconstrained photo collections featuring changing
+                lighting conditions. In this paper, we present R3GW, a novel method that learns a relightable 3DGS representation
+                of an outdoor scene captured in the wild. Our approach separates the scene into a relightable
+                foreground and a non-reflective background (the sky), using two distinct sets of Gaussians. R3GW models
+                view-dependent lighting effects in the foreground reflections by combining Physically Based Rendering
+                with the 3DGS scene representation in a varying illumination setting. We evaluate our method quantitatively
+                and qualitatively on the NeRF-OSR dataset, offering state-of-the-art performance and enhanced support for
+                physically-based relighting of unconstrained scenes. Our method synthesizes photorealistic novel views under
+                arbitrary illumination conditions. Additionally, our representation of the sky mitigates depth reconstruction
+                artifacts, improving rendering quality at the sky-foreground boundary.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-small">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method</h2>
+            <div class="content has-text-justified">
+              <p>
+                An overview of the training pipeline of our method. R3GW learns a relightable 3DGS representation of an outdoor scene captured in the
+                wild. The PBR color of the foreground Gaussians, depending on the surface normals and material properties at their positions,
+                as well as on the environment light, enables relighting of the scene’s foreground. In contrast, the color of the sky Gaussians is
+                independent of the scene illumination. The rendered image is formed by rasterizing the sky and the foreground Gaussians in a
+                single pass. The Gaussians are regularized so that the sky Gaussians are responsible for the rendering of the sky pixels, while
+                the foreground Gaussians contribute only to the foreground region. After training, the foreground Gaussians can be rendered
+                under novel lighting conditions by supplying the corresponding environment map as input.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <img src="static/images/R3GWPipeline.jpg" alt="MY ALT TEXT" />
+        </div>
+      </div>
+    </section>
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title">BibTeX</h2>
+            <p>If you use our method in your research, please cite our paper. The paper was presented at VISAPP 2026. You can use the following BibTeX entry:</p>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <div class="container is-max-desktop">
+        <pre><code>@InProceedings{corona2026r3gw,
+  author    = {Margherita Lea Corona and Wieland Morgenstern and Peter Eisert and Anna Hilsmann},
+  title     = {R3GW: Relightable 3D Gaussians for Outdoor Scenes in the Wild},
+  booktitle = {Proceedings of the 21st International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications (VISAPP 2026)},
+  year      = {2026},
+  pages     = {432-443},
+  publisher = {SCITEPRESS - Science and Technology Publications},
+  doi       = {https://doi.org/10.5220/0014332200004084}
+}</code></pre>
+      </div>
+    </section>
+
+    <!--End BibTex citation -->
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>. <br />
+                This website is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+  </body>
+</html>
