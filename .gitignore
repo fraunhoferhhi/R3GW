@@ -8,5 +8,4 @@ log*
 **/build
 *.egg-info
 *.dump
-eval*
 *.pyc
